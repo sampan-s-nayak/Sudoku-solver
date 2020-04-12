@@ -27,7 +27,7 @@ class Ocr(Dataset):
         for img_path in self.file_list:
             img = cv2.imread(self.path + '/' + img_path,0)
             img = ut.get_digit(img)
-            img = cv2.resize(img,(32,32),interpolation=cv2.INTER_AREA)
+            img = cv2.resize(img,(48,48),interpolation=cv2.INTER_AREA)
             self.images.append(img)
 		
     def __len__(self):

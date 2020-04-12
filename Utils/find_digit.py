@@ -47,10 +47,3 @@ def shrink_img(cell):
     # shrinking the cell in all sides
     cell_new = cell[p1:height-p1,p2:width-p2]
     return cell_new
-
-# if __name__=="__main__":
-#     img = cv2.imread('../4.png',0)
-#     digit = get_digit(img)
-#     cv2.imshow("img",digit)
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()

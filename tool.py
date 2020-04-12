@@ -12,7 +12,8 @@ def find_numbers(cells_raw):
     cells = []
     for cell in cells_raw:
         cell = fd.get_digit(cell)
-        resize = cv2.resize(cell, (32,32), interpolation = cv2.INTER_AREA)
+        # resize = cv2.resize(cell, (32,32), interpolation = cv2.INTER_AREA)
+        resize = cv2.resize(cell, (48,48), interpolation = cv2.INTER_AREA)
         cells.append(resize)
     return cells
 
@@ -24,7 +25,8 @@ def digitalize(model,cells):
     k = 0
     for cell in cells:
         cell = transform(cell)
-        predictions = model(cell.view(1,1,32,32))
+        # predictions = model(cell.view(1,1,32,32))
+        predictions = model(cell.view(1,1,48,48))
         value = int(predictions.argmax())
         row.append(value)
         k += 1

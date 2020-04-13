@@ -99,3 +99,4 @@ we need to extract only the digit from the cell
 2. find a better way to extract the sudoku grid.
 3. find a better way to extract the digits from the cell
 4. Improve the neural network (observation: resizing the digit images to (28x28) seemed to work better than resizing it to (48x48) (this is being used in the current implementation) )
+5. finding more data to train the model
